@@ -1,0 +1,193 @@
+html {
+  height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  display: flex;
+  background-color: #fff;
+  border-bottom:  1px solid #ccc;
+  z-index: 2;
+
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  flex-basis: 300px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-top: 16px;
+  margin-bottom: 8px;
+
+
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transition-duration: 250ms;
+  transition-delay: 100ms;
+  transition-property: color, text-shadow;
+  transition-timing-function: ease-in-out;
+}
+
+.brand:hover {
+  color: rgb(72, 106, 106);
+  text-shadow: none;
+}
+
+.nav-link {
+  text-align: left;
+  flex-basis: 20%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.nav a {
+
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  padding: 5px;
+  margin: 20px;
+
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* ----------------------------------- */
+
+.space {
+
+  width: 100%;
+  height: 100px;
+
+}
+
+.space_2 {
+  width: 100%;
+  height: 40px;
+
+}
+
+.center-column {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: left;
+  color: #000;
+  margin-bottom: 10px;
+
+}
+.on-dark {
+  background-color: rgb(224, 235, 235);
+  margin-bottom: 10px;
+}
+
+
+img {
+  width:100%;
+  display:block;
+  margin-right: auto;
+  padding: 40px;
+}
+
+img:hover {
+  border: 1px solid #ccc;
+  box-shadow:  0 15px 50px rgba(0,0,0,.2);
+}
+h1 {
+  margin-top: 20px;
+  font-size: 35px;
+  margin-left: 40px;
+
+}
+
+
+
+
+
+/* ------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .brand {
+    font-size: 20px;
+    flex-basis: 200px;
+  }
+
+
+
+  h1 {
+    font-size: 20px;
+  }
+
+
+
+}
+/* 小於1000px執行 */
+@media (max-width: 1000px) {
+
+
+  h1 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+  .nav-link {
+    display: none;
+  }
+
+  img {
+    width:100%;
+    display:block;
+    margin-right: auto;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 4096px)  {
+
+  body {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1400px;
+    box-shadow:  0 15px 50px rgba(0,0,0,.2);
+    margin-left: -700px;
+  }
+  .nav {
+    width: 1400px;
+  }
+
+  .brand {
+    font-size: 30px;
+    flex-basis: 300px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/* 建立快速連結和最上頁按鈕 優缺點文章貼上整理、懶人包圖片、影片位子校正、中文*/
+/* 改成width:100% 在media大於1400 固定1400 */
